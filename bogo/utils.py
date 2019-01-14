@@ -123,7 +123,7 @@ def separate(string):
     #     ['g', 'ia', ''] -> ['gi', 'a', '']
     #     ['q', 'ua', ''] -> ['qu', 'a', '']
     if (comps[0] != '' and comps[1] != '') and \
-        ((comps[0] in 'gG' and comps[1][0] in 'iI' and len(comps[1]) > 1) or
+        ((comps[0] in 'gG' and comps[1][0] in 'iI') or
          (comps[0] in 'qQ' and comps[1][0] in 'uU')):
         comps[0] += comps[1][:1]
         comps[1] = comps[1][1:]
